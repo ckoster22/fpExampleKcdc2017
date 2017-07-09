@@ -29,6 +29,9 @@ export const searchReposByUser = (user: string) => {
     };
 
     xhr.send(constructQuery(user));
+    store.dispatch({
+        type: 'RETRIEVING'
+    });
 };
 
 const constructQuery = (user: string) => `{
