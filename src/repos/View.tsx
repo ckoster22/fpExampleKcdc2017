@@ -7,7 +7,7 @@ const footerStyle = {
     color: '#586069'
 };
 export const view = (repo: Repository) => {
-    const repoDescrption = repo.description ? repo.description : '';
+    const repoDescription = repo.description ? repo.description : '';
 
     // TODO: pull out style
     return (
@@ -28,7 +28,7 @@ export const view = (repo: Repository) => {
             }}
         >
             {repoNameView(repo.owner, repo.name)}
-            {descriptionView(repoDescrption)}
+            {descriptionView(repoDescription)}
             <div style={footerStyle}>
                 {repo.language ? languageView(repo.language) : ''}
                 {starsView(repo.stars)}
