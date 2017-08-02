@@ -16,6 +16,7 @@ export const view = (repo: Repository) => {
             style={{
                 display: 'flex',
                 flexDirection: 'column',
+                flexShrink: 0,
                 alignItems: 'flex-start',
                 marginLeft: '16px',
                 paddingTop: '24px',

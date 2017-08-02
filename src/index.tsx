@@ -7,7 +7,7 @@ import store from './app.store.reducer';
 import {searchReposByUser} from './userEntry/Actions';
 
 const render = () => ReactDOM.render(
-  <App appstate={store.getState()} />,
+  <App appstate={store.getState()} style={{height: '100%'}}/>,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();

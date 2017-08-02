@@ -22,10 +22,10 @@ class App extends React.Component<any, any> {
 
         switch (appState.data.kind) {
             case 'Initial':
-                view = <span>About to retrieve repository data..</span>;
+                view = <span className="status">About to retrieve repository data..</span>;
                 break;
             case 'Retrieving':
-                view = <span>Retrieving. Please wait..</span>;
+                view = <span className="status">Retrieving. Please wait..</span>;
                 break;
             case 'Success':
                 const repoViews = appState.data.repositories
@@ -34,7 +34,7 @@ class App extends React.Component<any, any> {
                 if (repoViews.length > 0) {
                     view = repoViews;
                 } else {
-                    view = <span>No repositories :(</span>;
+                    view = <span className="status">No repositories :(</span>;
                 }
                 break;
             case 'Failure':
