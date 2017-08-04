@@ -7,7 +7,6 @@ import {
     searchReposByUser,
     toggleFilter,
     updateGithubUser } from './userEntry/Actions';
-// import * as Data from './data';
 import {AppState} from './app.store.reducer';
 import './App.css';
 

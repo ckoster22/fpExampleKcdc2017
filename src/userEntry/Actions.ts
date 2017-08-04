@@ -1,5 +1,6 @@
 import store from '../app.store.reducer';
 import {token} from '../Secret';
+// import * as Data from '../data';
 
 export const updateGithubUser = (user: string) => {
     store.dispatch({
@@ -32,6 +33,11 @@ export const searchReposByUser = (user: string) => {
     store.dispatch({
         type: 'RETRIEVING'
     });
+
+    // store.dispatch({
+    //     type: 'DATA_RETRIEVED',
+    //     payload: Data.default
+    // });
 };
 
 const constructQuery = (user: string) => `{
